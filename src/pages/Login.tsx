@@ -1,0 +1,284 @@
+import { useState } from 'react';
+import { useAuth, UserRole } from '../context/AuthContext';
+import { useNavigate, Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { LogIn, ShieldCheck, Activity, Users, Key, Mail, ArrowLeft, Loader2, CheckCircle2 } from 'lucide-react';
+
+const Login = () => {
+  const [step, setStep] = useState<'role' | 'credentials' | 'mfa' | 'otp' | 'forgot'>('role');
+  const [selectedRole, setSelectedRole] = useState<UserRole>('customer');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [code, setCode] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+
+  const { login, verifyMFA, verifyOTP } = useAuth();
+  const navigate = useNavigate();
+
+  const handleRoleSelect = (role: UserRole) => {
+    setSelectedRole(role);
+    setStep('credentials');
+  };
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      // Simulate credential check
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      if (selectedRole === 'superadmin' || selectedRole === 'admin') {
+        setStep('mfa');
+      } else if (selectedRole === 'dealer' || selectedRole === 'distributor') {
+        setStep('otp');
+      } else {
+        await login(email, 'customer');
+        navigate('/');
+      }
+    } catch (err: any) {
+      setError(err.message || 'Invalid credentials');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleVerifyMFA = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    if (await verifyMFA(code)) {
+      await login(email, selectedRole);
+      navigate(selectedRole === 'superadmin' ? '/super-admin' : '/admin');
+    } else {
+      setError('Invalid MFA code. Use 123456 for demo.');
+      setIsLoading(false);
+    }
+  };
+
+  const handleVerifyOTP = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    if (await verifyOTP(code)) {
+      await login(email, selectedRole);
+      navigate('/admin'); // Business portal
+    } else {
+      setError('Invalid OTP. Use 654321 for demo.');
+      setIsLoading(false);
+    }
+  };
+
+  const handleForgotPassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    // Simulate sending reset link or OTP
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    setSuccessMessage(selectedRole === 'dealer' || selectedRole === 'distributor' 
+      ? 'A 6-digit OTP has been sent to your registered business email.' 
+      : 'A secure reset link has been sent to your authorized email.');
+    setIsLoading(false);
+  };
+
+  return (
+    <div className="pt-40 pb-24 min-h-screen bg-navy-deep flex items-center justify-center px-6">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="metallic-card p-10 w-full max-w-md relative overflow-hidden"
+      >
+        <AnimatePresence mode="wait">
+          {step === 'role' && (
+            <motion.div 
+              key="role"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-8"
+            >
+              <div className="text-center">
+                <h1 className="text-3xl font-display font-black italic uppercase mb-2">Access Portal</h1>
+                <p className="text-white/50 text-sm">Select your account type to continue.</p>
+              </div>
+              <div className="grid grid-cols-1 gap-4">
+                <button onClick={() => handleRoleSelect('customer')} className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:border-brand-blue transition-all group">
+                  <div className="p-3 rounded-lg bg-brand-blue/10 text-brand-blue group-hover:bg-brand-blue group-hover:text-navy-deep transition-all">
+                    <Users size={24} />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="font-bold uppercase text-sm">Customer Account</h3>
+                    <p className="text-[10px] text-white/40 uppercase tracking-widest">Shop & Warranty Registration</p>
+                  </div>
+                </button>
+                <button onClick={() => handleRoleSelect('dealer')} className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:border-brand-red transition-all group">
+                  <div className="p-3 rounded-lg bg-brand-red/10 text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all">
+                    <ShieldCheck size={24} />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="font-bold uppercase text-sm">Business Partner</h3>
+                    <p className="text-[10px] text-white/40 uppercase tracking-widest">Dealers & Distributors</p>
+                  </div>
+                </button>
+                <button onClick={() => handleRoleSelect('admin')} className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:border-white/40 transition-all group">
+                  <div className="p-3 rounded-lg bg-white/10 text-white group-hover:bg-white group-hover:text-black transition-all">
+                    <Activity size={24} />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="font-bold uppercase text-sm">Internal Control</h3>
+                    <p className="text-[10px] text-white/40 uppercase tracking-widest">Admin & HQ Management</p>
+                  </div>
+                </button>
+              </div>
+            </motion.div>
+          )}
+
+          {step === 'credentials' && (
+            <motion.div 
+              key="credentials"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-6"
+            >
+              <button onClick={() => setStep('role')} className="text-white/40 hover:text-white flex items-center gap-2 text-xs uppercase tracking-widest transition-colors">
+                <ArrowLeft size={14} /> Back
+              </button>
+              <div className="text-center">
+                <h2 className="text-2xl font-display font-black italic uppercase mb-2">
+                  {selectedRole === 'customer' ? 'Customer Login' : selectedRole === 'admin' ? 'Admin Access' : 'Partner Portal'}
+                </h2>
+                <p className="text-white/50 text-sm">Enter your secure credentials.</p>
+              </div>
+              <form onSubmit={handleLogin} className="space-y-6">
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-white/40">Email Address</label>
+                  <input 
+                    type="email" 
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full bg-black/50 border border-white/10 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-brand-red transition-all"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-white/40">Password</label>
+                  <input 
+                    type="password" 
+                    required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="w-full bg-black/50 border border-white/10 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-brand-red transition-all"
+                  />
+                </div>
+                {error && <p className="text-brand-red text-xs font-bold uppercase tracking-widest">{error}</p>}
+                <button type="submit" disabled={isLoading} className="btn-primary w-full flex items-center justify-center gap-2">
+                  {isLoading ? <Loader2 className="animate-spin" /> : <LogIn size={20} />} Sign In
+                </button>
+                <button type="button" onClick={() => setStep('forgot')} className="w-full text-center text-[10px] text-white/40 hover:text-white uppercase tracking-widest transition-colors">
+                  Forgot Password?
+                </button>
+              </form>
+            </motion.div>
+          )}
+
+          {(step === 'mfa' || step === 'otp') && (
+            <motion.div 
+              key="verification"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-6"
+            >
+              <div className="text-center">
+                <div className="inline-block p-4 rounded-2xl bg-brand-red/10 border border-brand-red/20 mb-6">
+                  <Key size={32} className="text-brand-red" />
+                </div>
+                <h2 className="text-2xl font-display font-black italic uppercase mb-2">
+                  {step === 'mfa' ? 'MFA Verification' : 'OTP Verification'}
+                </h2>
+                <p className="text-white/50 text-sm">
+                  {step === 'mfa' 
+                    ? 'Enter the code from your authenticator app.' 
+                    : 'Enter the 6-digit code sent to your business email.'}
+                </p>
+              </div>
+              <form onSubmit={step === 'mfa' ? handleVerifyMFA : handleVerifyOTP} className="space-y-6">
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-white/40">Verification Code</label>
+                  <input 
+                    type="text" 
+                    required
+                    maxLength={6}
+                    value={code}
+                    onChange={(e) => setCode(e.target.value)}
+                    placeholder="000000"
+                    className="w-full bg-black/50 border border-white/10 rounded-lg py-4 text-center text-2xl font-mono tracking-[0.5em] text-white focus:outline-none focus:border-brand-red transition-all"
+                  />
+                </div>
+                {error && <p className="text-brand-red text-xs font-bold uppercase tracking-widest text-center">{error}</p>}
+                <button type="submit" disabled={isLoading} className="btn-primary w-full flex items-center justify-center gap-2">
+                  {isLoading ? <Loader2 className="animate-spin" /> : 'Verify & Continue'}
+                </button>
+              </form>
+            </motion.div>
+          )}
+
+          {step === 'forgot' && (
+            <motion.div 
+              key="forgot"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-6"
+            >
+              <button onClick={() => setStep('credentials')} className="text-white/40 hover:text-white flex items-center gap-2 text-xs uppercase tracking-widest transition-colors">
+                <ArrowLeft size={14} /> Back to Login
+              </button>
+              <div className="text-center">
+                <div className="inline-block p-4 rounded-2xl bg-brand-blue/10 border border-brand-blue/20 mb-6">
+                  <Mail size={32} className="text-brand-blue" />
+                </div>
+                <h2 className="text-2xl font-display font-black italic uppercase mb-2">Reset Password</h2>
+                <p className="text-white/50 text-sm">Enter your email to receive a reset link or OTP.</p>
+              </div>
+              {successMessage ? (
+                <div className="p-6 bg-brand-blue/10 border border-brand-blue/20 rounded-xl text-center space-y-4">
+                  <CheckCircle2 size={40} className="text-brand-blue mx-auto" />
+                  <p className="text-sm text-white/80">{successMessage}</p>
+                  <button onClick={() => setStep('credentials')} className="text-brand-blue text-xs font-bold uppercase tracking-widest hover:underline">
+                    Back to Login
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleForgotPassword} className="space-y-6">
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-white/40">Email Address</label>
+                    <input 
+                      type="email" 
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full bg-black/50 border border-white/10 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-brand-red transition-all"
+                    />
+                  </div>
+                  <button type="submit" disabled={isLoading} className="btn-primary w-full flex items-center justify-center gap-2">
+                    {isLoading ? <Loader2 className="animate-spin" /> : 'Send Reset Instructions'}
+                  </button>
+                </form>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
+        
+        <div className="mt-8 pt-6 border-t border-white/5 text-center">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-white/30">
+            Don't have an account? <Link to="/signup" className="text-brand-blue hover:underline">Join Torque Craft</Link>
+          </p>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+export default Login;
