@@ -150,9 +150,9 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-display font-black italic uppercase tracking-tighter mb-4">
-              Join the <span className="text-brand-red">Torque Craft</span> Network
+              Join the <span className="text-brand-red">Torque Craft</span> Business  Network
             </h2>
-            <p className="text-white/40 text-xs font-bold uppercase tracking-[0.3em]">Select your path to high-performance precision</p>
+            <p className="text-white/40 text-xs font-bold uppercase tracking-[0.3em]">choose your precision advantage</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -197,6 +197,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
     </div>
   );
 };
