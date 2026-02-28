@@ -967,7 +967,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-navy-deep/95 backdrop-blur-md border-b border-white/10 py-3' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-zinc-900/90 backdrop-blur-md border-b border-white/10 py-3' 
+    : 'bg-gradient-to-b from-black/80 to-transparent py-6'}`}>
       <div className="max-w-[1800px] mx-auto px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-1 sm:gap-2 shrink-0">
           <span className="text-xl sm:text-3xl font-black font-display tracking-tighter italic">
@@ -1136,12 +1137,12 @@ const Footer = () => {
         <div className="lg:col-span-2">
           <Link to="/" className="flex items-center gap-2 mb-8">
             <span className="text-3xl font-black font-display tracking-tighter italic">
-              <span className="text-white">TORQUE</span>
+              <span className="text-white">TORQUE </span>
               <span className="text-brand-red">CRAFT</span>
             </span>
           </Link>
           <p className="text-white/40 text-sm leading-relaxed mb-10 max-w-md">
-            The industry leader in high-performance diesel engines and precision automotive components. Crafted for quality, built for performance.
+            Precision-engineered head and main stud kits for high-performance diesel platforms. Crafted for quality. Built for performance.
           </p>
           <div className="flex gap-6">
             <Facebook size={18} className="text-white/30 hover:text-brand-red cursor-pointer transition-colors" />
@@ -1180,13 +1181,52 @@ const Footer = () => {
           </div>
         </div>
       </div>
+{/* 
+      <div className="max-w-7xl mx-auto px-4 md:px-6 pt-8 md:pt-12 border-t border-white/5 flex justify-center items-center">
+        <div className="flex flex-col items-center gap-4 w-full">
+          <p className="text-[9px] md:text-[10px] 
+      text-white/50 
+      uppercase 
+      tracking-[0.2em] md:tracking-[0.3em] 
+      font-medium 
+      border border-white/10 
+      px-3 py-2 md:px-6 md:py-3
+      rounded-full 
+      bg-white/[0.03] 
+      text-center
+      transition-all duration-300
+      hover:border-red-600/50 hover:bg-white/[0.05]">
+        © 2026 <span className="text-white font-bold" >TORQUE CRAFT PERFORMANCE</span>. <br className="block md:none" />ALL RIGHTS RESERVED.</p>
+        </div> */}
 
-      <div className="max-w-7xl mx-auto px-6 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex flex-col items-center md:items-start gap-4">
-          <p className="text-[10px] text-white/20 uppercase tracking-[0.3em]">© 2026 TORQUE CRAFT PERFORMANCE. ALL RIGHTS RESERVED.</p>
-        </div>
+
+
+<div className="max-w-7xl mx-auto px-4 md:px-6 pt-8 md:pt-12 border-t border-white/5 flex justify-center items-center">
+  <div className="flex flex-col items-center gap-4 w-full">
+    <p className="text-[9px] md:text-[10px] 
+      text-white/40 
+      uppercase 
+      tracking-[0.25em] md:tracking-[0.4em] 
+      font-display 
+      border border-white/5 
+      px-5 py-2.5 md:px-8 md:py-3
+      rounded-full 
+      bg-[#0B0F18]/40 
+      backdrop-blur-sm
+      text-center
+      transition-all duration-500
+      hover:border-brand-red/40 hover:bg-brand-red/5 hover:text-white/70
+      cursor-default">
+      © 2026 <span className="text-white/90 font-bold tracking-widest">TORQUE CRAFT</span> 
+      <span className="hidden md:inline mx-3 opacity-30">|</span> 
+      <br className="block md:hidden mb-1" />
+      <span className="font-light">All Rights Reserved</span>
+    </p>
+  </div>
+</div>
         
-        <div className="flex gap-8 items-center grayscale opacity-30">
+        
+        {/* <div className="flex gap-8 items-center grayscale opacity-30">
           <div className="flex flex-col items-center">
             <Award size={24} className="text-white mb-1" />
             <span className="text-[8px] font-bold uppercase tracking-widest">SEMA Member</span>
@@ -1195,8 +1235,8 @@ const Footer = () => {
             <ShieldCheck size={24} className="text-white mb-1" />
             <span className="text-[8px] font-bold uppercase tracking-widest">ISO 9001 Certified</span>
           </div>
-        </div>
-      </div>
+        </div> */}
+      
       
     </footer>
   );

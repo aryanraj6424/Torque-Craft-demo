@@ -1,7 +1,7 @@
 [
   {
     "id": "tc-hs-cum-59-12v-01",
-    "name": "Torque Craft Head Stud Kit – Cummins 5.9L 12V (1994–1998)",
+    "name": "Head Stud Kit – Cummins 5.9L 12V (1994–1998)",
     "sku": "TC-HS-CUM-59-12V-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -20,7 +20,7 @@
   },
   {
     "id": "tc-ms-cum-59-12v-01",
-    "name": "Torque Craft Main Stud Kit – Cummins 5.9L 12V (1994–1998)",
+    "name": "Main Stud Kit – Cummins 5.9L 12V (1994–1998)",
     "sku": "TC-MS-CUM-59-12V-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -39,7 +39,7 @@
   },
   {
     "id": "tc-hs-cum-59-24v-vp-01",
-    "name": "Torque Craft Head Stud Kit – Cummins 5.9L 24V VP44 (1998.5–2002)",
+    "name": "Head Stud Kit – Cummins 5.9L 24V VP44 (1998.5–2002)",
     "sku": "TC-HS-CUM-59-24V-VP-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -77,7 +77,7 @@
   },
   {
     "id": "tc-hs-cum-59-24v-cr-01",
-    "name": "Torque Craft Head Stud Kit – Cummins 5.9L 24V Common Rail (2003–2007)",
+    "name": "Head Stud Kit – Cummins 5.9L 24V Common Rail (2003–2007)",
     "sku": "TC-HS-CUM-59-24V-CR-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -96,7 +96,7 @@
   },
   {
     "id": "tc-ms-cum-59-24v-cr-01",
-    "name": "Torque Craft Main Stud Kit – Cummins 5.9L 24V Common Rail (2003–2007)",
+    "name":"Main Stud Kit – Cummins 5.9L 24V Common Rail (2003–2007)",
     "sku": "TC-MS-CUM-59-24V-CR-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -115,7 +115,7 @@
   },
   {
     "id": "tc-hs-cum-67-01",
-    "name": "Torque Craft Head Stud Kit – Cummins 6.7L 24V (2007.5–2024)",
+    "name": "Head Stud Kit – Cummins 6.7L 24V (2007.5–2024)",
     "sku": "TC-HS-CUM-67-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -134,7 +134,7 @@
   },
   {
     "id": "tc-ms-cum-67-01",
-    "name": "Torque Craft Main Stud Kit – Cummins 6.7L 24V (2007.5–2024)",
+    "name": "Main Stud Kit – Cummins 6.7L 24V (2007.5–2024)",
     "sku": "TC-MS-CUM-67-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -153,7 +153,7 @@
   },
   {
     "id": "tc-hs-dmax-lb7-01",
-    "name": "Torque Craft Head Stud Kit – Duramax LB7 (2001–2004)",
+    "name": "Head Stud Kit – Duramax LB7 (2001–2004)",
     "sku": "TC-HS-DMAX-LB7-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -172,7 +172,7 @@
   },
   {
     "id": "tc-ms-dmax-lb7-01",
-    "name": "Torque Craft Main Stud Kit – Duramax LB7 (2001–2004)",
+    "name": "Main Stud Kit – Duramax LB7 (2001–2004)",
     "sku": "TC-MS-DMAX-LB7-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -191,7 +191,7 @@
   },
   {
     "id": "tc-hs-dmax-lly-01",
-    "name": "Torque Craft Head Stud Kit – Duramax LLY (2004.5–2005)",
+    "name": "Head Stud Kit – Duramax LLY (2004.5–2005)",
     "sku": "TC-HS-DMAX-LLY-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -210,7 +210,7 @@
   },
   {
     "id": "tc-ms-dmax-lly-01",
-    "name": "Torque Craft Main Stud Kit – Duramax LLY (2004.5–2005)",
+    "name": "Main Stud Kit – Duramax LLY (2004.5–2005)",
     "sku": "TC-MS-DMAX-LLY-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -229,7 +229,7 @@
   },
   {
     "id": "tc-hs-dmax-lbz-01",
-    "name": "Torque Craft Head Stud Kit – Duramax LBZ (2006–2007)",
+    "name": "Head Stud Kit – Duramax LBZ (2006–2007)",
     "sku": "TC-HS-DMAX-LBZ-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -248,7 +248,7 @@
   },
   {
     "id": "tc-ms-dmax-lbz-01",
-    "name": "Torque Craft Main Stud Kit – Duramax LBZ (2006–2007)",
+    "name": "Main Stud Kit – Duramax LBZ (2006–2007)",
     "sku": "TC-MS-DMAX-LBZ-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -267,7 +267,7 @@
   },
   {
     "id": "tc-hs-dmax-lmm-01",
-    "name": "Torque Craft Head Stud Kit – Duramax LMM (2007.5–2010)",
+    "name": "Head Stud Kit – Duramax LMM (2007.5–2010)",
     "sku": "TC-HS-DMAX-LMM-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -286,7 +286,7 @@
   },
   {
     "id": "tc-ms-dmax-lmm-01",
-    "name": "Torque Craft Main Stud Kit – Duramax LMM (2007.5–2010)",
+    "name": "Main Stud Kit – Duramax LMM (2007.5–2010)",
     "sku": "TC-MS-DMAX-LMM-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -305,7 +305,7 @@
   },
   {
     "id": "tc-hs-dmax-lml-01",
-    "name": "Torque Craft Head Stud Kit – Duramax LML (2011–2016)",
+    "name": "Head Stud Kit – Duramax LML (2011–2016)",
     "sku": "TC-HS-DMAX-LML-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -324,7 +324,7 @@
   },
   {
     "id": "tc-ms-dmax-lml-01",
-    "name": "Torque Craft Main Stud Kit – Duramax LML (2011–2016)",
+    "name": "Main Stud Kit – Duramax LML (2011–2016)",
     "sku": "TC-MS-DMAX-LML-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -343,7 +343,7 @@
   },
   {
     "id": "tc-hs-dmax-l5p-01",
-    "name": "Torque Craft Head Stud Kit – Duramax L5P (2017–2024)",
+    "name": "Head Stud Kit – Duramax L5P (2017–2024)",
     "sku": "TC-HS-DMAX-L5P-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -362,7 +362,7 @@
   },
   {
     "id": "tc-ms-dmax-l5p-01",
-    "name": "Torque Craft Main Stud Kit – Duramax L5P (2017–2024)",
+    "name": "Main Stud Kit – Duramax L5P (2017–2024)",
     "sku": "TC-MS-DMAX-L5P-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -381,7 +381,7 @@
   },
   {
     "id": "tc-hs-ps-73-01",
-    "name": "Torque Craft Head Stud Kit – Powerstroke 7.3L (1994–2003)",
+    "name": "Head Stud Kit – Powerstroke 7.3L (1994–2003)",
     "sku": "TC-HS-PS-73-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -400,7 +400,7 @@
   },
   {
     "id": "tc-ms-ps-73-01",
-    "name": "Torque Craft Main Stud Kit – Powerstroke 7.3L (1994–2003)",
+    "name": "Main Stud Kit – Powerstroke 7.3L (1994–2003)",
     "sku": "TC-MS-PS-73-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -419,7 +419,7 @@
   },
   {
     "id": "tc-hs-ps-60-01",
-    "name": "Torque Craft Head Stud Kit – Powerstroke 6.0L (2003–2007)",
+    "name": "Head Stud Kit – Powerstroke 6.0L (2003–2007)",
     "sku": "TC-HS-PS-60-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -438,7 +438,7 @@
   },
   {
     "id": "tc-ms-ps-60-01",
-    "name": "Torque Craft Main Stud Kit – Powerstroke 6.0L (2003–2007)",
+    "name": "Main Stud Kit – Powerstroke 6.0L (2003–2007)",
     "sku": "TC-MS-PS-60-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -457,7 +457,7 @@
   },
   {
     "id": "tc-hs-ps-67-01",
-    "name": "Torque Craft Head Stud Kit – Powerstroke 6.7L (2011–2024)",
+    "name": "Head Stud Kit – Powerstroke 6.7L (2011–2024)",
     "sku": "TC-HS-PS-67-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -476,7 +476,7 @@
   },
   {
     "id": "tc-ms-ps-67-01",
-    "name": "Torque Craft Main Stud Kit – Powerstroke 6.7L (2011–2024)",
+    "name": "Main Stud Kit – Powerstroke 6.7L (2011–2024)",
     "sku": "TC-MS-PS-67-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -495,7 +495,7 @@
   },
   {
     "id": "tc-hs-toy-1hd-fte-01",
-    "name": "Torque Craft Head Stud Kit – Toyota 1HD-FTE (1998–2007)",
+    "name": "Head Stud Kit – Toyota 1HD-FTE (1998–2007)",
     "sku": "TC-HS-TOY-1HD-FTE-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -514,7 +514,7 @@
   },
   {
     "id": "tc-ms-toy-1hd-fte-01",
-    "name": "Torque Craft Main Stud Kit – Toyota 1HD-FTE (1998–2007)",
+    "name": "Main Stud Kit – Toyota 1HD-FTE (1998–2007)",
     "sku": "TC-MS-TOY-1HD-FTE-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -533,7 +533,7 @@
   },
   {
     "id": "tc-hs-toy-1hz-01",
-    "name": "Torque Craft Head Stud Kit – Toyota 1HZ (1990–2007)",
+    "name": "Head Stud Kit – Toyota 1HZ (1990–2007)",
     "sku": "TC-HS-TOY-1HZ-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -552,7 +552,7 @@
   },
   {
     "id": "tc-ms-toy-1hz-01",
-    "name": "Torque Craft Main Stud Kit – Toyota 1HZ (1990–2007)",
+    "name": "Main Stud Kit – Toyota 1HZ (1990–2007)",
     "sku": "TC-MS-TOY-1HZ-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -571,7 +571,7 @@
   },
   {
     "id": "tc-hs-toy-1kd-ftv-01",
-    "name": "Torque Craft Head Stud Kit – Toyota 1KD-FTV 3.0 (2001–2015)",
+    "name": "Head Stud Kit – Toyota 1KD-FTV 3.0 (2001–2015)",
     "sku": "TC-HS-TOY-1KD-FTV-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -590,7 +590,7 @@
   },
   {
     "id": "tc-ms-toy-1kd-ftv-01",
-    "name": "Torque Craft Main Stud Kit – Toyota 1KD-FTV 3.0 (2001–2015)",
+    "name": "Main Stud Kit – Toyota 1KD-FTV 3.0 (2001–2015)",
     "sku": "TC-MS-TOY-1KD-FTV-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -609,7 +609,7 @@
   },
   {
     "id": "tc-hs-toy-1kz-te-01",
-    "name": "Torque Craft Head Stud Kit – Toyota 1KZ-TE 3.0 (1993–2006)",
+    "name": "Head Stud Kit – Toyota 1KZ-TE 3.0 (1993–2006)",
     "sku": "TC-HS-TOY-1KZ-TE-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -628,7 +628,7 @@
   },
   {
     "id": "tc-ms-toy-1kz-te-01",
-    "name": "Torque Craft Main Stud Kit – Toyota 1KZ-TE 3.0 (1993–2006)",
+    "name": "Main Stud Kit – Toyota 1KZ-TE 3.0 (1993–2006)",
     "sku": "TC-MS-TOY-1KZ-TE-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -647,7 +647,7 @@
   },
   {
     "id": "tc-hs-nis-td42-01",
-    "name": "Torque Craft Head Stud Kit – Nissan TD42 (1987–2007)",
+    "name": "Head Stud Kit – Nissan TD42 (1987–2007)",
     "sku": "TC-HS-NIS-TD42-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -666,7 +666,7 @@
   },
   {
     "id": "tc-ms-nis-td42-01",
-    "name": "Torque Craft Main Stud Kit – Nissan TD42 (1987–2007)",
+    "name": "Main Stud Kit – Nissan TD42 (1987–2007)",
     "sku": "TC-MS-NIS-TD42-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -685,7 +685,7 @@
   },
   {
     "id": "tc-hs-isu-4jj1-01",
-    "name": "Torque Craft Head Stud Kit – Isuzu 4JJ1 3.0 (Global)",
+    "name": "Head Stud Kit – Isuzu 4JJ1 3.0 (Global)",
     "sku": "TC-HS-ISU-4JJ1-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -704,7 +704,7 @@
   },
   {
     "id": "tc-ms-isu-4jj1-01",
-    "name": "Torque Craft Main Stud Kit – Isuzu 4JJ1 3.0 (Global)",
+    "name": "Main Stud Kit – Isuzu 4JJ1 3.0 (Global)",
     "sku": "TC-MS-ISU-4JJ1-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -723,7 +723,7 @@
   },
   {
     "id": "tc-hs-mit-4m40-01",
-    "name": "Torque Craft Head Stud Kit – Mitsubishi 4M40 2.8 (1994–2006)",
+    "name": "Head Stud Kit – Mitsubishi 4M40 2.8 (1994–2006)",
     "sku": "TC-HS-MIT-4M40-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -742,7 +742,7 @@
   },
   {
     "id": "tc-ms-mit-4m40-01",
-    "name": "Torque Craft Main Stud Kit – Mitsubishi 4M40 2.8 (1994–2006)",
+    "name": "Main Stud Kit – Mitsubishi 4M40 2.8 (1994–2006)",
     "sku": "TC-MS-MIT-4M40-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -761,7 +761,7 @@
   },
   {
     "id": "tc-hs-mit-4d56-01",
-    "name": "Torque Craft Head Stud Kit – Mitsubishi 4D56 2.5 (Global)",
+    "name": "Head Stud Kit – Mitsubishi 4D56 2.5 (Global)",
     "sku": "TC-HS-MIT-4D56-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -780,7 +780,7 @@
   },
   {
     "id": "tc-ms-mit-4d56-01",
-    "name": "Torque Craft Main Stud Kit – Mitsubishi 4D56 2.5 (Global)",
+    "name": "Main Stud Kit – Mitsubishi 4D56 2.5 (Global)",
     "sku": "TC-MS-MIT-4D56-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -799,7 +799,7 @@
   },
   {
     "id": "tc-hs-sub-ej25-t-01",
-    "name": "Torque Craft Head Stud Kit – Subaru EJ25 Turbo (WRX/STI)",
+    "name": "Head Stud Kit – Subaru EJ25 Turbo (WRX/STI)",
     "sku": "TC-HS-SUB-EJ25-T-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -818,7 +818,7 @@
   },
   {
     "id": "tc-ms-sub-ej25-t-01",
-    "name": "Torque Craft Main Stud Kit – Subaru EJ25 Turbo (WRX/STI)",
+    "name": "Main Stud Kit – Subaru EJ25 Turbo (WRX/STI)",
     "sku": "TC-MS-SUB-EJ25-T-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -837,7 +837,7 @@
   },
   {
     "id": "tc-hs-toy-2jz-01",
-    "name": "Torque Craft Head Stud Kit – Toyota 2JZ (GTE/GE)",
+    "name": "Head Stud Kit – Toyota 2JZ (GTE/GE)",
     "sku": "TC-HS-TOY-2JZ-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -856,7 +856,7 @@
   },
   {
     "id": "tc-ms-toy-2jz-01",
-    "name": "Torque Craft Main Stud Kit – Toyota 2JZ (GTE/GE)",
+    "name": "Main Stud Kit – Toyota 2JZ (GTE/GE)",
     "sku": "TC-MS-TOY-2JZ-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -875,7 +875,7 @@
   },
   {
     "id": "tc-hs-nis-rb26-01",
-    "name": "Torque Craft Head Stud Kit – Nissan RB26",
+    "name": "Head Stud Kit – Nissan RB26",
     "sku": "TC-HS-NIS-RB26-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -894,7 +894,7 @@
   },
   {
     "id": "tc-ms-nis-rb26-01",
-    "name": "Torque Craft Main Stud Kit – Nissan RB26",
+    "name": "Main Stud Kit – Nissan RB26",
     "sku": "TC-MS-NIS-RB26-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -913,7 +913,7 @@
   },
   {
     "id": "tc-hs-bmw-n54-01",
-    "name": "Torque Craft Head Stud Kit – BMW N54 (2006–2010)",
+    "name": "Head Stud Kit – BMW N54 (2006–2010)",
     "sku": "TC-HS-BMW-N54-01",
     "category": "Engine Components",
     "price": 299.00,
@@ -932,7 +932,7 @@
   },
   {
     "id": "tc-ms-bmw-n54-01",
-    "name": "Torque Craft Main Stud Kit – BMW N54 (2006–2010)",
+    "name": "Main Stud Kit – BMW N54 (2006–2010)",
     "sku": "TC-MS-BMW-N54-01",
     "category": "Engine Components",
     "price": 299.00,

@@ -35,7 +35,7 @@ const Home = () => {
               Built for <span className="text-brand-blue">Performance.</span>
             </h1>
             <p className="text-lg md:text-xl text-white/50 mb-12 leading-relaxed max-w-xl font-light">
-              Torque Craft delivers premium diesel engines and high-performance components engineered to exceed the most rigorous industry standards.
+              Torque Craft manufactures precision-engineered automotive components, including high-strength head and main stud kits for high-performance diesel platforms. Engineered to exceed rigorous industry standards.
             </p>
             <div className="flex flex-wrap gap-6">
               <Link to="/shop" className="btn-hero-blue flex items-center gap-3 px-8 py-4 text-sm uppercase tracking-widest font-bold">
@@ -65,8 +65,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Feature Strip */}
-      <section className="bg-black/80 border-y border-white/10 py-12">
+      {/* Feature Strip Old one */}
+      {/* <section className="bg-black/80 border-y border-white/10 py-12">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex items-center gap-4">
             <div className="p-2 rounded-lg bg-white/5 border border-white/10">
@@ -105,10 +105,74 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Popular Categories */}
-      <section className="py-24 bg-black">
+
+
+
+      {/* Feature Strip - Updated with Highlighted Scratch Background */}
+<section className="relative z-30 py-12 border-y border-white/10 overflow-hidden">
+  {/* 1. Base Grey Scratch Background */}
+  <div className="absolute inset-0 bg-[#121212] opacity-95" />
+  
+  {/* 2. Scratch Texture Overlay (Metallic Look) */}
+  <div 
+    className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" 
+    style={{ backgroundSize: '200px' }}
+  />
+
+  {/* 3. Gradient Highlight (Left to Right) */}
+  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent" />
+
+  <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    {/* Item 1 */}
+    <div className="flex items-center gap-4 group">
+      <div className="p-2 rounded-lg bg-white/5 border border-white/10 group-hover:border-brand-red transition-all duration-300">
+        <ShieldCheck className="text-brand-red" size={24} />
+      </div>
+      <div>
+        <h3 className="font-display font-bold uppercase text-xs tracking-wider text-white">QR Authentication</h3>
+        <p className="text-[10px] text-white/40 uppercase tracking-widest font-medium">Genuine Product Protection</p>
+      </div>
+    </div>
+
+    {/* Item 2 */}
+    <div className="flex items-center gap-4 group">
+      <div className="p-2 rounded-lg bg-white/5 border border-white/10 group-hover:border-brand-blue transition-all duration-300">
+        <Users className="text-brand-blue" size={24} />
+      </div>
+      <div>
+        <h3 className="font-display font-bold uppercase text-xs tracking-wider text-white">Dealer Program</h3>
+        <p className="text-[10px] text-white/40 uppercase tracking-widest font-medium">B2B Pricing & Bulk Orders</p>
+      </div>
+    </div>
+
+    {/* Item 3 */}
+    <div className="flex items-center gap-4 group">
+      <div className="p-2 rounded-lg bg-white/5 border border-white/10 group-hover:border-brand-red transition-all duration-300">
+        <Gauge className="text-brand-red" size={24} />
+      </div>
+      <div>
+        <h3 className="font-display font-bold uppercase text-xs tracking-wider text-white">Dyno Tested</h3>
+        <p className="text-[10px] text-white/40 uppercase tracking-widest font-medium">Guaranteed Power Output</p>
+      </div>
+    </div>
+
+    {/* Item 4 */}
+    <div className="flex items-center gap-4 group">
+      <div className="p-2 rounded-lg bg-white/5 border border-white/10 group-hover:border-brand-blue transition-all duration-300">
+        <Zap className="text-brand-blue" size={24} />
+      </div>
+      <div>
+        <h3 className="font-display font-bold uppercase text-xs tracking-wider text-white">Fast Shipping</h3>
+        <p className="text-[10px] text-white/40 uppercase tracking-widest font-medium">Global Logistics Network</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* Popular Categories Old one */}
+      {/* <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-2xl font-display font-bold italic uppercase mb-2 tracking-widest">Popular Engine Categories</h2>
@@ -142,7 +206,59 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+
+      {/* Popular Categories Section Updated one - Blue to Red Hover Fix */}
+<section className="py-24 bg-black">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-2xl font-display font-bold italic uppercase mb-2 tracking-widest text-white">
+        Popular Engine Categories
+      </h2>
+      <div className="w-16 h-1 bg-brand-red mx-auto" />
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {products.slice(0, 6).map((product) => {
+        // "Torque Craft" remove karne ki logic
+        const displayName = product.name.replace(/Torque Craft/gi, "").trim();
+
+        return (
+          <motion.div
+            key={product.id}
+            whileHover={{ y: -10 }}
+            /* Default: Blue border/glow 
+               Hover: Red border/glow 
+            */
+            className="group relative overflow-hidden rounded-lg bg-[#0A0F1E]/60 p-6 flex flex-col items-center text-center transition-all duration-500 border border-brand-blue/20 hover:border-brand-red/50 hover:shadow-[0_0_30px_rgba(220,38,38,0.15)] shadow-[0_0_20px_rgba(37,99,235,0.05)]"
+          >
+            {/* Name: Blue to Red on Hover */}
+            <h3 className="text-sm font-display font-bold mb-6 uppercase tracking-widest text-brand-blue group-hover:text-brand-red transition-colors duration-300">
+              {displayName}
+            </h3>
+            
+            <div className="aspect-square w-full mb-8 overflow-hidden rounded-lg bg-black/40 border border-white/5">
+              <img 
+                src={product.image} 
+                alt={displayName} 
+                className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+
+            {/* Button: Blue to Red on Hover */}
+            <Link 
+              to={`/product/${product.id}`} 
+              className="w-full py-3 text-xs font-bold uppercase tracking-widest rounded transition-all duration-300 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 group-hover:bg-brand-red group-hover:text-white group-hover:border-brand-red"
+            >
+              Shop Now
+            </Link>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       {/* Join the Network Section */}
       <section className="py-24 bg-navy-deep relative overflow-hidden">
