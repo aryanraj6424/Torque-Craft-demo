@@ -967,12 +967,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-zinc-900/90 backdrop-blur-md border-b border-white/10 py-3' 
-    : 'bg-gradient-to-b from-black/80 to-transparent py-6'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0B0F18]/90 backdrop-blur-md border-b border-white/10 py-3' 
+    : 'bg-gradient-to-b from-[#0B0F18] to-transparent py-6'}`}>
       <div className="max-w-[1800px] mx-auto px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-1 sm:gap-2 shrink-0">
           <span className="text-xl sm:text-3xl font-black font-display tracking-tighter italic">
-            <span className="text-white">TORQUE</span>
+            <span className="text-white">TORQUE </span>
             <span className="text-brand-red">CRAFT</span>
           </span>
         </Link>
@@ -1127,7 +1127,7 @@ const Footer = () => {
   // const repeatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos];
 
   return (
-    <footer className="bg-black border-t border-white/10  pb-12">
+    <footer className="bg-[#070A10] border-t border-white/10  pb-12">
 
 
       <PartnershipLogos/>
