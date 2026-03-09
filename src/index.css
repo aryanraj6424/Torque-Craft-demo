@@ -60,7 +60,7 @@
  @import "tailwindcss";
 
 @theme {
-  --color-brand-red: #E10600;
+  --color-brand-red: #E31E24;
   --color-brand-blue: #003366;
   --color-navy-dark: #0A0F1E;
   
@@ -103,8 +103,11 @@
 }
 
 @utility border-glow-red {
-  border: 1px solid rgba(225, 6, 0, 0.8);
-  box-shadow: inset 0 0 10px rgba(225, 6, 0, 0.2), 0 0 15px rgba(225, 6, 0, 0.4);
+  /* border: 1px solid rgba(225, 6, 0, 0.8);
+  box-shadow: inset 0 0 10px rgba(225, 6, 0, 0.2), 0 0 15px rgba(225, 6, 0, 0.4); */
+  border: 4px solid #E31E24; /* Thick border as requested */
+  box-shadow: 0 0 25px rgba(227, 30, 36, 0.6); /* Stronger glow */
+  transition: all 0.3s ease-in-out;
 }
 
 @utility border-glow-blue {
